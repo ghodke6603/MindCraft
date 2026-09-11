@@ -1,0 +1,1416 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#h1 {
+    width: 100%;
+    height: 60px;
+
+    background: #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0px 40px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    /* CSS-only scroll animation */
+    animation: headerScroll linear both;
+    animation-timeline: scroll();
+    animation-range: 0 300px;
+}
+
+@keyframes headerScroll {
+
+    0% {
+        background: #00000000;
+    }
+
+    50% {
+        background: #000;
+    }
+
+    100% {
+        background: #000;
+    }
+}
+#logo img{
+    width: 55px;
+    height: auto;
+    display: block;
+}
+#navlinks {
+    display: flex;
+    gap: 10px;
+}
+#navlinks a{
+     color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+#menu-btn {
+    display: none;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+#Hero {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.45),
+                        rgba(0, 0, 0, 0.45)),
+        url("assets/img/1.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+}
+#Hero {
+    padding: 60px 0 0;
+}
+
+#herotext {
+    width: 55%;
+    max-width: 650px;
+
+    color: white;
+
+    position: relative;
+    z-index: 2;
+}
+
+#herotext h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+#herotext p {
+    font-family: 'Lora', serif;
+    font-size: 25px;
+    font-style: italic;
+
+    margin-bottom: 35px;
+}
+
+
+/* ================= DOWNLOAD BUTTONS ================= */
+
+#herotext button {
+    background: transparent;
+
+    border: 1px solid white;
+    border-radius: 35px;
+
+    padding: 10px 25px;
+    margin-right: 12px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#herotext button:hover {
+    background: #e1666a;
+}
+
+#herotext button a {
+    color: white;
+    text-decoration: none;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+#herotext button:hover a {
+    color: #fff;
+}
+
+#herotext button span {
+    font-size: 22px;
+}
+
+
+/* ================= PHONE IMAGE ================= */
+
+#heroimage {
+    width: 45%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+#heroimage img {
+    width: 420px;
+    max-width: 100%;
+    height: auto;
+
+    display: block;
+}
+/* ================= FEATURES SECTION ================= */
+
+#features {
+    width: 100%;
+    min-height: 460px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 110px 12% 90px;
+
+    background: #fff;
+}
+
+/* Each feature */
+#features > div {
+    width: 22%;
+}
+
+/* Icon circle */
+#features > div > div:first-child {
+    width: 98px;
+    height: 98px;
+
+    border: 1px solid #e1666a;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+}
+/* Icons */
+#features .icon,
+#features i {
+    color: #e1666a;
+    font-size: 28px;
+}
+/* Hover on individual feature */
+#features > div:hover > div:first-child {
+    background-color: #e1666a;
+}
+
+
+/* Change only the hovered feature's icon */
+#features > div:hover > div:first-child i {
+    color: white;
+}
+#features > div:hover > div:first-child img {
+    filter: brightness(0) invert(1);
+}
+
+
+/* Heading */
+#features h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+
+    color: #555;
+
+    margin-bottom: 10px;
+}
+
+/* Paragraph */
+#features p {
+    font-family: 'Lora', serif;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    font-style: italic;
+
+    color: #777;
+
+    margin: 0;
+}
+/* ================= EXPLORE SECTION ================= */
+
+#explore {
+    width: 100%;
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+
+    padding: 100px 12%;
+
+    background: #f8f8f8;
+}
+
+
+/* ================= IMAGES ================= */
+
+#explore > div:nth-child(1),
+#explore > div:nth-child(2) {
+    width: 24%;
+}
+
+#explore > div:nth-child(1) img,
+#explore > div:nth-child(2) img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+
+/* ================= TEXT CONTENT ================= */
+
+#explore > div:nth-child(3) {
+    width: 48%;
+
+    padding-left: 20px;
+}
+
+#explore h2 {
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 34px;
+    font-weight: 400;
+
+    color: #555;
+
+    margin-bottom: 20px;
+}
+
+#explore p {
+    font-family: 'Lora', serif;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    font-style: italic;
+
+    color: #777;
+
+    margin-bottom: 35px;
+}
+
+
+/* ================= DOWNLOAD BUTTONS ================= */
+
+#explore button {
+    background: transparent;
+
+    border: 1px solid #777;
+
+    border-radius: 30px;
+
+    padding: 9px 24px;
+
+    margin-right: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#explore button a {
+    text-decoration: none;
+
+    color: #666;
+
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 16px;
+}
+
+#explore button span {
+    font-size: 21px;
+}
+
+
+/* ================= BUTTON HOVER ================= */
+
+#explore button:hover {
+    background: #e1666a;
+    border-color: #e1666a;
+}
+
+#explore button:hover a {
+    color: white;
+}
+
+/* ===========================container section================== */
+#container {
+    width: 100%;
+    min-height: 700px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 32px;
+
+    padding: 70px 12% 60px;
+
+    background: #fff;
+}
+/* ================= HEADING ================= */
+
+#container > div:first-child {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container h2 {
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 34px;
+    font-weight: 400;
+
+    color: #555;
+
+    margin-bottom: 50px;
+
+    text-align: center;
+}
+/* ================= VIDEO ================= */
+
+#container iframe {
+    width: 840px;
+    max-width: 100%;
+
+    height: 472px;
+
+    border: none;
+
+    display: block;
+}
+
+/* ================= SHARE HEADING ================= */
+
+#container > h3 {
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 22px;
+    font-weight: 400;
+
+    color: #555;
+
+    margin-top: 45px;
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+#social ul {
+    display: flex;
+
+    gap: 22px;
+
+    margin: 0;
+    padding: 0;
+}
+
+#social li {
+    list-style: none;
+}
+
+#social button {
+    width: 52px;
+    height: 52px;
+
+    background: white;
+
+    border: 1px solid #333;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#social button a {
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 25px;
+}
+
+
+/* ================= SOCIAL HOVER ================= */
+
+#social button:hover {
+    background: #e1666a;
+    border-color: #e1666a;
+}
+
+#social button:hover a {
+    color: white;
+}
+/* ================= TESTIMONIAL ================= */
+
+#testionial {
+    width: 100%;
+    min-height: 680px;
+
+   
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55),
+                        rgba(0, 0, 0, 0.55)),
+        url("assets/img/5.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+    padding: 130px 10% 80px;
+   
+}
+
+
+/* ================= TESTIMONIAL TITLE ================= */
+
+#testionial::before {
+    content: "TESTIMONIAL";
+
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 30px;
+    font-weight: 400;
+
+    color: white;
+
+    margin-bottom: 28px;
+}
+
+
+/* ================= TESTIMONIAL BOX ================= */
+
+#testionial > div:first-child {
+    width: 70%;
+    max-width: 820px;
+
+    min-height: 155px;
+
+    background: white;
+
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 35px 60px;
+
+    text-align: center;
+
+    position: relative;
+}
+
+
+/* ================= QUOTE ================= */
+
+#testionial > div:first-child p {
+    font-family: 'Lora', serif;
+
+    font-size: 23px;
+    font-style: italic;
+
+    line-height: 1.5;
+
+    color: #222;
+
+    margin: 0;
+}
+
+
+/* ================= AUTHOR IMAGE ================= */
+
+#testionial > div:last-child {
+    margin-top: 35px;
+
+    position: relative;
+    z-index: 2;
+}
+
+#testionial > div:last-child img {
+    width: 165px;
+    height: 165px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid white;
+
+    display: block;
+}
+/* ================= USER INTERFACE ================= */
+
+#user_interface {
+    width: 100%;
+    min-height: 700px;
+
+    background: #f7f7f7;
+
+    padding: 75px 12% 100px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-rows: auto 1fr;
+
+    column-gap: 50px;
+
+    align-items: center;
+}
+
+
+/* ================= HEADING ================= */
+
+#user_interface > header {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+#user_interface > header h2 {
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 32px;
+    font-weight: 400;
+
+    color: #555;
+
+    margin: 0;
+}
+
+
+/* ================= PHONE IMAGES ================= */
+
+#user_interface > div:nth-child(2) {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#user_interface > div:nth-child(2) img {
+    width: 540px;
+    max-width: 100%;
+
+    height: auto;
+
+    display: block;
+}
+
+
+/* ================= RIGHT SIDE FEATURES ================= */
+
+#user_interface > div:nth-child(3) {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+
+/* ================= EACH FEATURE ================= */
+
+#user_interface .icon {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/* ================= ICON CIRCLE ================= */
+
+#user_interface .icon > div:first-child button {
+    width: 88px;
+    height: 88px;
+
+    border: 1px solid #e1666a;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    transition: 0.3s ease;
+}
+
+
+/* ================= ICON ================= */
+
+#user_interface .icon > div:first-child i {
+    color: #e1666a;
+
+    font-size: 25px;
+
+    transition: 0.3s ease;
+}
+
+
+/* ================= TEXT ================= */
+
+#user_interface .icon h4 {
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    color: #555;
+
+    margin-bottom: 5px;
+}
+
+#user_interface .icon p {
+    font-family: 'Lora', serif;
+
+    font-size: 15px;
+
+    font-style: italic;
+
+    color: #777;
+
+    margin: 0;
+}
+
+
+/* ================= HOVER ================= */
+
+#user_interface .icon:hover > div:first-child button {
+    background: #e1666a;
+}
+
+#user_interface .icon:hover > div:first-child i {
+    color: white;
+}
+/* ================= NEWSLETTER ================= */
+
+#singup {
+    width: 100%;
+    height: 355px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("assets/img/7.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+}
+
+
+/* Heading */
+
+#singup h2 {
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 30px;
+    font-weight: 400;
+
+    margin-bottom: 40px;
+
+    text-align: center;
+}
+
+
+/* Form */
+
+#singup form {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+/* Email input */
+
+#singup input {
+    width: 405px;
+    height: 40px;
+
+    padding: 0 20px;
+
+    background: transparent;
+
+    border: 1px solid white;
+
+    color: white;
+
+    font-family: 'Lora', serif;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+/* Placeholder */
+
+#singup input::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+
+/* Send button */
+
+#singup button {
+    width: 108px;
+    height: 40px;
+
+    background: white;
+
+    border: 1px solid white;
+
+    color: #555;
+
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    text-transform: uppercase;
+
+    transition: 0.3s ease;
+}
+
+
+/* Button hover */
+
+#singup button:hover {
+    background: #e1666a;
+    border-color: #e1666a;
+
+    color: white;
+}
+/* ================= FOOTER ================= */
+
+footer {
+    width: 100%;
+    height: 120px;
+
+    background: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 15%;
+}
+
+
+/* ================= FOOTER LOGO ================= */
+
+footer > div:first-child img {
+    width: 65px;
+    height: auto;
+
+    display: block;
+}
+
+
+/* ================= SOCIAL ICONS ================= */
+
+footer > div:nth-child(2) ul {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+
+    padding: 0;
+    margin: 0;
+}
+
+footer > div:nth-child(2) li {
+    list-style: none;
+}
+
+
+/* Social buttons */
+
+footer > div:nth-child(2) button {
+    width: 48px;
+    height: 48px;
+
+    background: #fff;
+
+    border: 1px solid #333;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+/* Social links */
+
+footer > div:nth-child(2) button a {
+    color: #000;
+
+    text-decoration: none;
+
+    font-size: 23px;
+
+    display: flex;
+}
+
+
+/* Hover */
+
+footer > div:nth-child(2) button:hover {
+    background: #e1666a;
+    border-color: #e1666a;
+}
+
+footer > div:nth-child(2) button:hover a {
+    color: #fff;
+}
+
+
+/* ================= FOOTER TEXT ================= */
+
+footer > div:last-child p {
+    font-family: 'Lora', serif;
+
+    font-size: 16px;
+
+    font-style: italic;
+
+    color: #555;
+
+    margin: 0;
+}
+
+footer > div:last-child p::first-letter {
+    color: #555;
+}
+
+/* =====================================================
+   MOBILE RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* ================= HEADER ================= */
+
+    #h1 {
+        width: 100%;
+        height: 58px;
+
+        padding: 0 30px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #logo img {
+        width: 58px;
+    }
+
+    /* Hide desktop navigation */
+    #navlinks {
+        display: none;
+    }
+
+    /* Show menu button */
+    #menu-btn {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 40px;
+        height: 40px;
+    }
+
+    #menu-btn img {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+    }
+
+
+    /* ================= HERO ================= */
+
+    #Hero {
+        min-height: 100vh;
+
+        padding: 100px 30px 50px;
+
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        background-attachment: scroll;
+    }
+
+    #herotext {
+        width: 100%;
+        max-width: 500px;
+
+        order: 1;
+    }
+
+    #herotext h1 {
+        font-size: 34px;
+    }
+
+    #herotext p {
+        font-size: 20px;
+    }
+
+    #herotext button {
+        margin: 5px;
+    }
+
+    #heroimage {
+        width: 100%;
+
+        order: 2;
+
+        margin-top: 30px;
+    }
+
+    #heroimage img {
+        width: 300px;
+        max-width: 90%;
+    }
+/* ================= FEATURES - MOBILE ================= */
+
+#features {
+    width: 100%;
+
+    padding: 40px 18px 55px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 35px;
+    row-gap: 30px;
+
+    align-items: start;
+}
+
+
+/* Each feature */
+
+#features > div {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    text-align: left;
+}
+
+
+/* Icon circle */
+
+#features > div > div:first-child {
+    width: 98px;
+    height: 98px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Icon */
+
+#features > div > div:first-child i,
+#features > div > div:first-child img {
+    max-width: 35px;
+    max-height: 35px;
+}
+
+
+/* Heading */
+
+#features h3 {
+    font-size: 21px;
+
+    font-weight: 400;
+
+    color: #555;
+
+    margin-bottom: 10px;
+}
+
+
+/* Description */
+
+#features p {
+    font-family: 'Lora', serif;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    font-style: italic;
+
+    color: #777;
+
+    margin: 0;
+}
+
+
+    /* ================= EXPLORE ================= */
+
+    #explore {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 70px 30px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 25px;
+    }
+
+    #explore > div:nth-child(1),
+    #explore > div:nth-child(2),
+    #explore > div:nth-child(3) {
+        width: 100%;
+        max-width: 450px;
+
+        padding-left: 0;
+    }
+
+    #explore > div:nth-child(1) img,
+    #explore > div:nth-child(2) img {
+        width: 100%;
+        height: auto;
+
+        display: block;
+    }
+
+    #explore > div:nth-child(3) {
+        text-align: left;
+
+        margin-top: 20px;
+    }
+
+    #explore h2 {
+        font-size: 30px;
+    }
+
+    #explore p {
+        font-size: 16px;
+    }
+
+    #explore button {
+        margin-bottom: 10px;
+    }
+
+
+    /* ================= MINDCRAFT IN ACTION ================= */
+
+    #container {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 70px 30px 60px;
+    }
+
+    #container h2 {
+        font-size: 30px;
+
+        margin-bottom: 35px;
+    }
+
+    #container iframe {
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 16 / 9;
+    }
+
+    #container > h3 {
+        font-size: 19px;
+
+        margin-top: 35px;
+        margin-bottom: 20px;
+
+        text-align: center;
+    }
+
+    #social ul {
+        gap: 15px;
+    }
+
+    #social button {
+        width: 48px;
+        height: 48px;
+    }
+
+
+    /* ================= TESTIMONIAL ================= */
+
+    #testionial {
+        width: 100%;
+
+        min-height: 600px;
+
+        padding: 80px 25px 60px;
+
+        background-attachment: scroll;
+    }
+
+    #testionial::before {
+        font-size: 28px;
+
+        margin-bottom: 25px;
+    }
+
+    #testionial > div:first-child {
+        width: 100%;
+        max-width: 500px;
+
+        min-height: 180px;
+
+        padding: 30px 25px;
+    }
+
+    #testionial > div:first-child p {
+        font-size: 20px;
+    }
+
+    #testionial > div:last-child {
+        margin-top: 30px;
+    }
+
+    #testionial > div:last-child img {
+        width: 140px;
+        height: 140px;
+    }
+
+
+    /* ================= USER INTERFACE ================= */
+
+    #user_interface {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 70px 30px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 40px;
+    }
+
+    #user_interface > header {
+        width: 100%;
+
+        margin-bottom: 0;
+    }
+
+    #user_interface > header h2 {
+        font-size: 28px;
+    }
+
+    /* Triple phone image */
+
+    #user_interface > div:nth-child(2) {
+        width: 100%;
+    }
+
+    #user_interface > div:nth-child(2) img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    /* Right-side features become normal rows */
+
+    #user_interface > div:nth-child(3) {
+        width: 100%;
+
+        gap: 25px;
+    }
+
+    #user_interface .icon {
+        width: 100%;
+
+        gap: 15px;
+    }
+
+    #user_interface .icon > div:first-child button {
+        width: 75px;
+        height: 75px;
+    }
+
+    #user_interface .icon h4 {
+        font-size: 16px;
+    }
+
+    #user_interface .icon p {
+        font-size: 14px;
+    }
+
+
+    /* ================= NEWSLETTER ================= */
+
+    #singup {
+        width: 100%;
+
+        height: auto;
+        min-height: 350px;
+
+        padding: 70px 30px;
+
+        text-align: center;
+
+        background-attachment: scroll;
+    }
+
+    #singup h2 {
+        font-size: 27px;
+
+        margin-bottom: 30px;
+    }
+
+    #singup form {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    #singup input {
+        width: 100%;
+        max-width: 450px;
+
+        height: 45px;
+    }
+
+    #singup button {
+        width: 110px;
+
+        height: 45px;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    footer {
+        width: 100%;
+
+        height: auto;
+
+        min-height: 220px;
+
+        padding: 35px 30px;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 25px;
+
+        text-align: center;
+    }
+
+    footer > div:first-child img {
+        width: 65px;
+    }
+
+    footer > div:nth-child(2) ul {
+        gap: 15px;
+    }
+
+    footer > div:last-child p {
+        font-size: 15px;
+    }
+}
